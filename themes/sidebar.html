@@ -1,0 +1,34 @@
+      <div class="row-fluid">
+        <div class="span2 offset1">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              {foreach item=i from=$hooks->add_Mainsidebar|@sortby:"#prio"}
+		          {if $i.id eq 'main_links'}
+		          <li class="nav-header">{$i.title}</li>
+		 			{foreach item=i from=$hooks->add_Menu|@sortby:"#prio"}            
+					  {if isset($i.dropdown)}
+					  <li class="dropdown">
+					  	 <a href="/" class="dropdown-toggle" data-toggle="dropdown">{$i.title} <b class="caret"></b></a> 
+					  	 <ul class="dropdown-menu">
+					  	 {foreach item=j from=$i.dropdown}
+					  	 <li><a href="{$j.url}">{$j.title}</a></li>
+					  	 {/foreach}
+					  	 </ul>
+					  </li>
+					  {else} 
+					  	<li {if $i.id eq $smarty.get.p || empty($smarty.get.p) && $i.url eq '/'}class="active"{/if}><a href="{$i.url}">{$i.title}</a></li>
+					  {/if} 
+		 			{/foreach}
+				  {elseif $i.id eq 'other_links'}
+				      <li class="nav-header">{$i.title}</li>
+				      <li><a href="#">Link</a></li>
+				      <li><a href="#">Link</a></li>
+				      <li><a href="#">Link</a></li>
+				      <li><a href="#">Link</a></li>
+				      <li><a href="#">Link</a></li>
+				      <li><a href="#">Link</a></li>
+		          {/if} 
+              {/foreach}
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->

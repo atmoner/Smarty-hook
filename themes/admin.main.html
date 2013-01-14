@@ -1,0 +1,45 @@
+{include file="header.html" title='Main'}
+
+<link rel='stylesheet' href='themes/css/admin.css' type='text/css' />
+
+<table class="widefat" cellspacing="0" id="active-plugins-table">
+	<thead>
+		<tr>
+			<th scope="col">Plugin</th>
+			<th scope="col" class="num">Version</th>
+			<th scope="col">Description</th>
+			<th scope="col" class="action-links">Action</th>
+		</tr>
+	</thead>
+
+	<tfoot>
+		<tr>
+			<th scope="col">Plugin</th>
+			<th scope="col" class="num">Version</th>
+			<th scope="col">Description</th>
+			<th scope="col" class="action-links">Action</th>
+		</tr>
+	</tfoot>
+ 
+	<tbody class="plugins">
+	{foreach from=$api item=i}
+		<tr {$i.active}>
+			<td class='name'> <a href="" title="">{$i.Name}</a> </td>
+			<td class='vers' align='center'>{$i.Version}</td>
+			<td class='desc'><p>{$i.Description}</p>
+
+						<div class='active second plugin-version-author-uri'>
+						Version {$i.Version} | Author: <a href="{$i.AuthorURI}" title="{$language.GO_TO_AUTHOR}" target="_blank">{$i.Author}</a> | <a href="{$i.AuthorURI}" title="{$language.WEB_SITE}" target="_blank">{$language.GO_TO_PLUGIN}</a>
+						</div>
+ 
+			</td>
+			<td>				 
+		 	  {$i.linkAdd} 
+			</td>
+		</tr>
+	{/foreach} 
+	</tbody>
+</table>
+
+ 
+{include file="footer.html"}
