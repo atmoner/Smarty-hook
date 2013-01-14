@@ -13,7 +13,7 @@ Smarty Hooks system
 
 > In computer programming, the term hooking covers a range of techniques used to alter or augment the behavior of an operating system, of applications, or of other software components by intercepting function calls or messages or events passed between software components. Code that handles such intercepted function calls, events or messages is called a “hook”.
 
-How hooks work on this script?
+### How hooks work on this script? ###
 
 The hook system work into two parts:
 
@@ -24,7 +24,7 @@ The hook system work into two parts:
 
         what are the possible action that can be run for each hook
 
-How to create my first plugin?
+### How to create my first plugin? ###
 
     All plugins are found in the /plugins folder, which is at the root of the script main folder.
     Each modules has its own sub-folder inside the /plugins folder: /paypal, /newpage, etc. 
@@ -34,7 +34,7 @@ How to create my first plugin?
 
 This example allows you to create a new page:
 
-<?php
+``<?php
 
 /*
 Plugin Name: My first plugin
@@ -55,7 +55,7 @@ $data['url'] = "http://www.your-website.com/";
 
 //register plugin data
 register_plugin($plugin_id, $data);
-
+``
 
     With this basic plugin, you can go to the administration panel, you will see your plugin appear!
     Now you just call your function by hooks, like this:
