@@ -34,27 +34,27 @@ The hook system work into two parts:
 
 This example allows you to create a new page:
 
-`<?php
+    <?php
 
-/*
-Plugin Name: My first plugin
-Plugin URI: http://your-url.com/your-plugin.html
-Description: This is the short description of your plugin
-Version: 1.0
-Author: Your Name
-Author URI: http://www.your-website.com/
-*/
+    /*
+    Plugin Name: My first plugin
+    Plugin URI: http://your-url.com/your-plugin.html
+    Description: This is the short description of your plugin
+    Version: 1.0
+    Author: Your Name
+    Author URI: http://www.your-website.com/
+    */
 
-//set plugin id as file name of plugin
-$plugin_id = basename(__FILE__);
+    //set plugin id as file name of plugin
+    $plugin_id = basename(__FILE__);
 
-//some plugin data
-$data['name'] = "My first plugin";
-$data['author'] = "Your Name";
-$data['url'] = "http://www.your-website.com/";
+    //some plugin data
+    $data['name'] = "My first plugin";
+    $data['author'] = "Your Name";
+    $data['url'] = "http://www.your-website.com/";
 
-//register plugin data
-register_plugin($plugin_id, $data);`
+    //register plugin data
+    register_plugin($plugin_id, $data);
 
     With this basic plugin, you can go to the administration panel, you will see your plugin appear!
     Now you just call your function by hooks, like this:
