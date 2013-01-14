@@ -17,12 +17,11 @@ Smarty Hooks system
 
 The hook system work into two parts:
 
-        Hook
+[Hook](https://github.com/atmoner/Smarty-hook/blob/master/libs/Hooks.class.php "Hook")
+The hooks can trigger an hook function to a precise location of the site
 
-        The hooks can trigger an hook function to a precise location of the site
-        Hook function
-
-        what are the possible action that can be run for each hook
+[Hook function](https://github.com/atmoner/Smarty-hook/blob/master/libs/Hooks.functions.class.php "Hook function")
+what are the possible action that can be run for each hook
 
 ### How to create my first plugin? ###
 
