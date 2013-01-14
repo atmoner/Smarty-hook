@@ -105,7 +105,8 @@ Once the hook state, you can add the condition test your hook to the desired loc
     add_hook('new_page','plugin_function');
 
 
-### Demonstration ###
+> Think .... Captain watching you
 
-See admin panel
+![Captain](http://www.broadwaymag.com/wp-content/uploads/2012/12/cffb42b8304_306x454.jpg)
+
 
