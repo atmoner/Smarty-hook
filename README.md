@@ -26,11 +26,11 @@ The hook system work into two parts:
 
 ### How to create my first plugin? ###
 
-All plugins are found in the /plugins folder, which is at the root of the script main folder.
-Each modules has its own sub-folder inside the /plugins folder: /paypal, /newpage, etc. 
+All plugins are found in the /plugins folder, which is at the root of the script main folder.  
+Each modules has its own sub-folder inside the /plugins folder: /paypal, /newpage, etc.  
 
-The name of the php file of the plugin should be like this: *.plugin.php
-Exemple: /plugins/newpage/myplugin.plugin.php 
+The name of the php file of the plugin should be like this: *.plugin.php  
+Exemple: /plugins/newpage/myplugin.plugin.php  
 
 This example allows you to create a new page:
 
@@ -78,18 +78,18 @@ To continue the example, we can use function addMenu() to add the link in header
     add_hook('action','addMenu_plugin');
 
 
-This completes the example of creation of plugin.
-Obviously, it will write all the other hooks to make your script interesting
+This completes the example of creation of plugin.  
+Obviously, it will write all the other hooks to make your script interesting  
 
 ### How to create new hook? ###
 
-All hooks are declared in the file: /libs/startup.php
-To create a new hook, you must add it to the array of $hook->set_hooks function.
+All hooks are declared in the file: /libs/startup.php  
+To create a new hook, you must add it to the array of $hook->set_hooks function.  
 Exemple:
 
     $hook->set_hooks(
     	array(
-    		'action',  
+    		'action',
     		'new_page',
     		'my_new_hook' // My new hook
     	));
@@ -97,7 +97,7 @@ Exemple:
 
 Once the hook state, you can add the condition test your hook to the desired location, like this:
 
-    if ($hook->hook_exist('my_new_hook'))  
+    if ($hook->hook_exist('my_new_hook'))
     	$hook->execute_hook('my_new_hook'); 
 
 
