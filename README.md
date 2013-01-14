@@ -34,7 +34,7 @@ The hook system work into two parts:
 
 This example allows you to create a new page:
 
-``<?php
+`<?php
 
 /*
 Plugin Name: My first plugin
@@ -54,8 +54,7 @@ $data['author'] = "Your Name";
 $data['url'] = "http://www.your-website.com/";
 
 //register plugin data
-register_plugin($plugin_id, $data);
-``
+register_plugin($plugin_id, $data);`
 
     With this basic plugin, you can go to the administration panel, you will see your plugin appear!
     Now you just call your function by hooks, like this:
