@@ -1,1 +1,2 @@
-Smarty-hook
+Smarty hooks
+=============
