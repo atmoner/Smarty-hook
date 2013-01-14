@@ -4,10 +4,10 @@ Smarty Hooks system
 * * *
 
 *   [What is a hook?](#what-is-a-hook "What is a hook?")
-*   How hooks work on this script?
-*   How to create my first plugin?
-*   How to create new hook?
-*   Demonstration
+*   [How hooks work on this script?](#how-hooks-work-on-this-script "How hooks work on this script?")
+*   [How to create my first plugin?](#how-to-create-my-first-plugin "How to create my first plugin?")
+*   [How to create new hook?](#how-to-create-new-hook "How to create new hook?")
+*   [Demonstration](#demonstration "Demonstration")
 
 ### What is a hook? ###
 
