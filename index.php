@@ -33,11 +33,7 @@ $hook->addMenu('documentation', 'Documentation', '?p=documentation', 6,
 					'hooks_functions' => array(
 						'title' => 'Hooks functions', 
 						'url' => '?p=documentation&section=hook-functions'
-					),
-					'test' => array(
-						'title' => 'Test', 
-						'url' => '?p=documentation&section=test'
-					)
+					) 
 				));
 
 $hook->addMainsidebar('main_links', 'Main links', '/', 5);
