@@ -36,6 +36,7 @@ Exemple: /plugins/newpage/myplugin.plugin.php
 
 This example allows you to create a new page:
 
+```php
     <?php
 
     /*
@@ -57,10 +58,11 @@ This example allows you to create a new page:
 
     //register plugin data
     register_plugin($plugin_id, $data);
+```
 
 With this basic plugin, you can go to the administration panel, you will see your plugin appear!
 Now you just call your function by hooks, like this:
-
+```php
     function add_New_page() {
 	    global $hook;
 	    $hook->add_page('newpage','newpage');
@@ -68,17 +70,17 @@ Now you just call your function by hooks, like this:
 
     // add hook, where to execute a function
     add_hook('new_page','add_New_page');
-
+```
 
 To continue the example, we can use function addMenu() to add the link in header and sidebar
-
+```php
     function addMenu_plugin() {
 	    global $hook;
 	    $hook->addMenu('newpage', 'My new page', '?p=newpage', 8); 
     }
 
     add_hook('action','addMenu_plugin');
-
+```
 
 This completes the example of creation of plugin.  
 Obviously, it will write all the other hooks to make your script interesting  
@@ -88,25 +90,25 @@ Obviously, it will write all the other hooks to make your script interesting
 All hooks are declared in the file: /libs/startup.php  
 To create a new hook, you must add it to the array of $hook->set_hooks function.  
 Exemple:
-
+```php
     $hook->set_hooks(
     	array(
     		'action',
     		'new_page',
     		'my_new_hook' // My new hook
     	));
-
+```
 
 Once the hook state, you can add the condition test your hook to the desired location, like this:
-
+```php
     if ($hook->hook_exist('my_new_hook'))
     	$hook->execute_hook('my_new_hook'); 
-
+```
 
 ### Using the hook in a plugin ###
-
+```php
     add_hook('new_page','plugin_function');
-
+```
 
 ### Demonstration ###
 
